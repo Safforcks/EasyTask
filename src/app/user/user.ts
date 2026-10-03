@@ -8,16 +8,8 @@ import { UserInput } from './user.model';
 })
 export class User {
   @Input({required: true}) user!: UserInput;
+  @Input({required: true}) selected!: boolean;
   @Output() select = new EventEmitter<string>();
-
-  // id = input.required<string>;
-  // avatar = input.required<string>();
-  // name = input.required<string>();
-  // select = output<string>();
-
-  // imagePath = computed(() => {
-  //   return 'assets/users/' + this.avatar;
-  // })
 
   get imagemPath(){
     return 'assets/users/' + this.user.avatar;

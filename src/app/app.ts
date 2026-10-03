@@ -5,7 +5,6 @@ import { Tasks } from './tasks/tasks';
 
 import { DUMMY_USERS } from './user/dummy-users';
 
-
 @Component({
   selector: 'app-root',
   imports: [Header, User, Tasks],
@@ -13,7 +12,7 @@ import { DUMMY_USERS } from './user/dummy-users';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('aprender-angular');
+  protected readonly title = signal('EasyTask');
   users = DUMMY_USERS;
   selectedUserId?: string;
 
