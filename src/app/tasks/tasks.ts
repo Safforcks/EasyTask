@@ -1,15 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from './task/task';
+import { NewTask } from './new-task/new-task';
 
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.html',
   styleUrl: './tasks.css',
-  imports: [Task]
+  imports: [Task, NewTask]
 })
 export class Tasks {
   @Input({required: true}) userId!: string;
   @Input({required: true}) name!: string;
+  isAddingTask = false;
+  @Output() click = new EventEmitter<string>;
 
   tasks = [
     {
@@ -43,5 +46,9 @@ export class Tasks {
 
   onCompleteTask(id: string) {
     this.tasks = this.tasks.filter((task) => task.id != id);
+  }
+
+  onStartAddTask() {
+    this.isAddingTask = true;
   }
 }
