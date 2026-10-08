@@ -12,8 +12,7 @@ export class Tasks {
   @Input({required: true}) userId!: string;
   @Input({required: true}) name!: string;
   isAddingTask = false;
-  @Output() click = new EventEmitter<string>;
-
+  
   tasks = [
     {
       id: 't1',
@@ -50,5 +49,9 @@ export class Tasks {
 
   onStartAddTask() {
     this.isAddingTask = true;
+  }
+
+  onCancelAddTask() {
+    this.isAddingTask = false;
   }
 }
