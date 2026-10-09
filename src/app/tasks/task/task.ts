@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { DatePipe } from '@angular/common';
+
 import { TaskInput } from './task.model';
 import { Card } from '../../shared/card/card';
 
@@ -6,7 +8,7 @@ import { Card } from '../../shared/card/card';
   selector: 'app-task',
   templateUrl: './task.html',
   styleUrl: './task.css',
-  imports: [Card],
+  imports: [Card, DatePipe],
 })
 export class Task {
   @Input({ required: true}) task!: TaskInput;
