@@ -1,5 +1,19 @@
 # EasyTask
 
+## Telas da aplicação
+
+### Lista de tarefas
+
+Seleção de perfil e visualização das tarefas com título, resumo e prazo de entrega.
+
+![Lista de tarefas do EasyTask](docs/images/lista-tarefas.png)
+
+### Adicionar tarefa
+
+Formulário para cadastrar uma tarefa com título, resumo e prazo de entrega.
+
+![Formulário de cadastro de tarefa do EasyTask](docs/images/adicionar-tarefa.png)
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.24.
 
 ## Development server
