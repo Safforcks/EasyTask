@@ -10,12 +10,16 @@
         </menu>
     </header>
 
-    <ul>
-        @for(task of selectedUserTasks; track task.id) {
-            <li>
-                <app-task [task]="task"/>
-            </li>
-        }
-    </ul>
+    @if (!selectedUserTasks || selectedUserTasks.length === 0) {
+        <p>Não há tarefas disponíveis.</p>
+    } @else {
+        <ul>
+            @for(task of selectedUserTasks; track task.id) {
+                <li>
+                    <app-task [task]="task"/>
+                </li>
+            }
+        </ul>
+    }
 </section>
 

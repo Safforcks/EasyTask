@@ -45,7 +45,13 @@ textarea {
   margin: 1rem 0 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 0.25rem;
+}
+
+.warningMessage {
+  color: rgba(255, 0, 0, 0.87);
+  font-size: 0.8rem;
 }
 
 button {
@@ -81,5 +87,9 @@ button[type="submit"]:active {
 @media (min-width: 768px) {
   dialog {
     padding: 2rem;
+  }
+
+  .warningMessage {
+    font-size: 0.9rem;
   }
 }

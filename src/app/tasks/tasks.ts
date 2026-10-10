@@ -13,6 +13,7 @@ export class Tasks {
   @Input({required: true}) userId!: string;
   @Input({required: true}) name!: string;
   isAddingTask = false;
+  
 
   constructor(private tasksService: TasksService) {}
 

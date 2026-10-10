@@ -12,19 +12,36 @@ import { TasksService } from '../tasks.service';
 export class NewTask {
   @Input({required: true}) userId!: string;
   @Output() close = new EventEmitter<void>()
+
   enterdTitle = '';
   enterdSummary = '';
   enterdDate = '';
+  hasValidationError  = false;
 
   private tasksService = inject(TasksService)
 
   onSubmit() {
+    const isFilled = !!(
+      this.enterdTitle.trim() && 
+      this.enterdSummary.trim() && 
+      this.enterdDate
+    );
+
+    this.hasValidationError  = !isFilled;
+
+    if (!isFilled) return;
+    
     this.tasksService.addTask({
       title: this.enterdTitle,
       summary: this.enterdSummary,
       date: this.enterdDate,
     }, this.userId);
 
+    this.close.emit();
+  }
+
+  onCancel() {
+    this.hasValidationError  = false;
     this.close.emit();
   }
 }

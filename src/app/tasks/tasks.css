@@ -1,7 +1,7 @@
 #tasks {
   padding: 1rem;
   border-radius: 8px;
-  max-height: 60vh;
+  max-height: 58vh;
   overflow: auto;
   background-color: #3a2c54;
 }
@@ -19,6 +19,11 @@ h2 {
   font-size: 0.9rem;
   width: 60%;
   text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  font-size: 0.8rem;
 }
 
 menu {
@@ -69,5 +74,9 @@ ul {
 
   menu {
     width: auto;
+  }
+
+  p {
+    font-size: 1rem;
   }
 }
