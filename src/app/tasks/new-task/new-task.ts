@@ -19,17 +19,13 @@ export class NewTask {
 
   private tasksService = inject(TasksService)
 
-  onCancel() {
-    this.close.emit()
-  }
-
   onSubmit() {
     this.tasksService.addTask({
       title: this.enterdTitle,
       summary: this.enterdSummary,
       date: this.enterdDate,
     }, this.userId);
-    
+
     this.close.emit();
   }
 }
