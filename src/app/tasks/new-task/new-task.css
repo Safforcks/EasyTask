@@ -1,5 +1,5 @@
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color:rgba(15, 23, 42, 0.85);
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
 dialog {
   width: 90%;
   max-width: 30rem;
-  background-color: #433352;
+  background-color: #1e293b;
   border-radius: 6px;
   border: none;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
@@ -21,14 +21,14 @@ dialog {
 
 h2 {
   margin: 0;
-  color: #d0c2e1;
+  color: #f1f5f9;
 }
 
 label {
   display: block;
   font-weight: bold;
   font-size: 0.85rem;
-  color: #ab9ac0;
+  color: #cbd5e1;
 }
 
 input,
@@ -37,8 +37,9 @@ textarea {
   font: inherit;
   padding: 0.15rem 0.25rem;
   border-radius: 4px;
-  border: 1px solid #ab9ac0;
-  background-color: #d0c2e1;
+  border: 1px solid #94a3b8;
+  background-color: #dbeafe;
+  color: #0f172a;
 }
 
 .actions {
@@ -50,7 +51,7 @@ textarea {
 }
 
 .warningMessage {
-  color: rgba(255, 0, 0, 0.87);
+  color: #fca5a5;
   font-size: 0.8rem;
 }
 
@@ -69,18 +70,18 @@ button[type="button"] {
 
 button[type="button"]:hover,
 button[type="button"]:active {
-  color: #d0c2e1;
+  color: #ffffff;
 }
 
 button[type="submit"] {
-  background-color: #9c73ca;
+  background-color: #2563eb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 button[type="submit"]:hover,
 button[type="submit"]:active {
-  background-color: #895cce;
+  background-color: #1d4ed8;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
