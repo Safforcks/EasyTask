@@ -1,59 +1,99 @@
 # EasyTask
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.24.
+Mais organização para suas tarefas do dia a dia.
 
-## Development server
+O EasyTask é uma aplicação de gerenciamento de tarefas desenvolvida com Angular e TypeScript. Permite selecionar um perfil, consultar suas tarefas e adicionar novas atividades com título, resumo e prazo de entrega.
 
-To start a local development server, run:
+## Telas da aplicação
 
-```bash
-ng serve
-```
+Seleção de perfil e visualização das tarefas com título, resumo e prazo de entrega.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+![Lista de tarefas do EasyTask](docs/images/lista-tarefas.png)
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Formulário para cadastrar uma tarefa com título, resumo e prazo de entrega.
 
-```bash
-ng generate component component-name
-```
+![Formulário de cadastro de tarefa do EasyTask](docs/images/adicionar-tarefa.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Funcionalidades
 
-```bash
-ng generate --help
-```
+- Seleção de perfis demonstrativos.
+- Exibição das tarefas do perfil selecionado.
+- Cadastro de tarefas com título, resumo e data.
+- Verificação de preenchimento dos campos obrigatórios.
+- Conclusão de tarefas, removendo-as da lista.
+- Armazenamento das tarefas no navegador com `localStorage`.
+- Exibição dos prazos em português do Brasil.
+- Layout com adaptações para diferentes tamanhos de tela.
 
-## Building
+## Tecnologias
 
-To build the project run:
+- Angular 21.2.
+- TypeScript 5.9.
+- HTML e CSS.
+- Angular Forms, com vinculação dos campos por `ngModel`.
+- Vitest configurado para testes.
 
-```bash
-ng build
-```
+## Como executar
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Com Git, Node.js compatível com Angular 21.2 e npm instalados, execute:
 
 ```bash
-ng test
+git clone https://github.com/Safforcks/EasyTask.git
+cd EasyTask
+npm install
+npm start
 ```
 
-## Running end-to-end tests
+Depois, acesse:
 
-For end-to-end (e2e) testing, run:
+```text
+http://localhost:4200
+```
+
+## Como usar
+
+1. Selecione um perfil na lista de usuários.
+2. Consulte as tarefas associadas ao perfil.
+3. Abra o formulário para adicionar uma tarefa.
+4. Preencha o título, o resumo e o prazo de entrega.
+5. Clique em **Criar** para salvar.
+6. Utilize o botão de conclusão para remover uma tarefa da lista.
+
+Se algum campo estiver vazio, o formulário apresenta a mensagem **“Preencha todos os campos.”**
+
+## Organização do código
+
+| Local | Responsabilidade |
+|---|---|
+| `src/app/header/` | Cabeçalho da aplicação. |
+| `src/app/user/` | Perfis demonstrativos e seleção de usuários. |
+| `src/app/tasks/` | Lista de tarefas e serviço de gerenciamento. |
+| `src/app/tasks/new-task/` | Formulário de cadastro e validação. |
+| `src/app/tasks/task/` | Exibição e conclusão de uma tarefa. |
+| `src/app/shared/card/` | Componente reutilizável de cartão. |
+| `src/assets/` | Logo e imagens dos perfis. |
+
+O `TasksService` centraliza a consulta, a criação, a remoção e o armazenamento das tarefas.
+
+## Armazenamento e limitações
+
+As tarefas são armazenadas no `localStorage` do navegador. Ao recarregar a página, a aplicação recupera os dados salvos.
+
+Os perfis são demonstrativos e definidos no código. A seleção de um perfil não representa autenticação.
+
+Na implementação atual:
+
+- Não há backend ou banco de dados remoto.
+- As tarefas não são sincronizadas entre dispositivos ou navegadores.
+- Limpar os dados do site apaga as tarefas armazenadas.
+- Concluir uma tarefa a remove; não existe histórico de tarefas concluídas.
+- A validação verifica o preenchimento, sem bloquear datas passadas.
+
+## Comandos disponíveis
 
 ```bash
-ng e2e
+npm start   # Inicia o servidor de desenvolvimento
+npm run build   # Gera a compilação de produção
+npm test   # Executa os testes configurados
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
