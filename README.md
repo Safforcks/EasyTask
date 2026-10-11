@@ -1,19 +1,5 @@
 # EasyTask
 
-## Telas da aplicação
-
-### Lista de tarefas
-
-Seleção de perfil e visualização das tarefas com título, resumo e prazo de entrega.
-
-![Lista de tarefas do EasyTask](docs/images/lista-tarefas.png)
-
-### Adicionar tarefa
-
-Formulário para cadastrar uma tarefa com título, resumo e prazo de entrega.
-
-![Formulário de cadastro de tarefa do EasyTask](docs/images/adicionar-tarefa.png)
-
 Mais organização para suas tarefas do dia a dia.
 
 O EasyTask é uma aplicação de gerenciamento de tarefas desenvolvida com Angular e TypeScript. Permite selecionar um perfil, consultar suas tarefas e adicionar novas atividades com título, resumo e prazo de entrega.
@@ -23,7 +9,6 @@ O EasyTask é uma aplicação de gerenciamento de tarefas desenvolvida com Angul
 Seleção de perfil e visualização das tarefas com título, resumo e prazo de entrega.
 
 ![Lista de tarefas do EasyTask](docs/images/lista-tarefas.png)
-
 
 Formulário para cadastrar uma tarefa com título, resumo e prazo de entrega.
 
