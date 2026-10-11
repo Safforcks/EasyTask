@@ -1,7 +1,5 @@
 # EasyTask
 
-Mais organização para suas tarefas do dia a dia.
-
 O EasyTask é uma aplicação de gerenciamento de tarefas desenvolvida com Angular e TypeScript. Permite selecionar um perfil, consultar suas tarefas e adicionar novas atividades com título, resumo e prazo de entrega.
 
 ## Telas da aplicação
